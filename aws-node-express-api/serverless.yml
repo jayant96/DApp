@@ -1,0 +1,20 @@
+service: aws-node-express-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  environment:
+    MORALIS_API_KEY: '8Cp5geb4GDd5BwaoVdbtXpDnUGXuN68zq7XWRyOyR6TNh3PCjrNinXXOZEW3NhsF'
+    APP_DOMAIN: apeharbour.com
+    REACT_URL: https://apeharbour.com
+    AUTH_SECRET: 1234
+
+plugins:
+  - serverless-offline  
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'

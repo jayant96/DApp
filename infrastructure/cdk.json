@@ -1,0 +1,26 @@
+{
+  "app": "node bin/infrastructure.js",
+  "watch": {
+    "include": [
+      "**"
+    ],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      "jest.config.js",
+      "package*.json",
+      "yarn.lock",
+      "node_modules",
+      "test"
+    ]
+  },
+  "context": {
+    "app_name": "AHWebsite",
+    "owner": "apeharbour",
+    "repo": "website",
+    "connectionArn": "arn:aws:codestar-connections:us-east-1:919499606571:connection/0abfbd3b-a596-40a5-92f5-3ad136b1a0c2",
+    "domainNames_dev": ["beta.apeharbour.com"],
+    "domainNames_prod": ["apeharbour.com", "www.apeharbour.com"],
+    "certificateArn": "arn:aws:acm:us-east-1:919499606571:certificate/8e1d2ab9-a2d4-4587-a37f-cca29b02dbd2"
+  }
+}

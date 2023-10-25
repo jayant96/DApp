@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Enter pre_build stage
+      - cd website
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
+  base-directory: website/build
